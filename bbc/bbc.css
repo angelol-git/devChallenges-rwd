@@ -1,0 +1,72 @@
+:root {
+    --light-grey: #F2F5F9;
+    --white: #FFFFFF;
+    --navy: #111720;
+    --grey-blue: #677489;
+}
+
+.bbc__container {
+    display: flex;
+    flex-direction: column;
+    width: 418px;
+    overflow: hidden;
+    background-color: var(--white);
+    border-radius: 1rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.bbc__container-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 30px 30px 30px;
+}
+
+.bbc__image-container {
+    position: relative;
+    background-color: blue;
+}
+
+.bbc__image-overlay {
+    position: absolute;
+    translate: 0px, 20px;
+    bottom: 0;
+}
+
+.bbc__title {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bbc__description {
+    color: var(--grey-blue);
+}
+
+
+.bbc__line {
+    border-bottom: 1px solid var(--light-grey);
+    width: 120%;
+    margin-left: -20px;
+}
+
+.bbc__author {
+    display: flex;
+    gap: 20px;
+}
+
+.bbc__author-icon {
+    width: 45px;
+    height: auto;
+    border: 5px solid var(--light-grey);
+    border-radius: 50%;
+}
+
+.bbc__author-name {
+    font-weight: bold;
+}
+
+.bbc__author-job {
+    font-size: 0.825rem;
+    color: var(--grey-blue);
+}

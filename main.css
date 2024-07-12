@@ -1,0 +1,33 @@
+:root {
+    --dark-purple: #883AE1;
+    --light-purple: #E6D6Fc;
+    --light-grey: #E5EAF0;
+    --dark-grey: #6C727F;
+    --off-white: #FAFAF9;
+    --white: #FFFFFF;
+    --black: #20293A;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Sora", sans-serif;
+    background-color: var(--off-white);
+}
+
+.header-link {
+    padding-left: 12px;
+    ;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.home__title {
+    margin-bottom: 30px;
+}
