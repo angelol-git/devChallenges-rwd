@@ -1,0 +1,13 @@
+:root {
+    --yellow: #F5C044;
+    --green: #4CA154;
+    --black: #18181B;
+    --dark-grey: #52525A;
+    --grey: #D4D4D8;
+    --off-white: #FAFAF9;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: "Sora", sans-serif;
+}
