@@ -11,3 +11,113 @@
 body {
     font-family: "Sora", sans-serif;
 }
+
+.reviewers__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1280px;
+    padding: 60px;
+    gap: 40px;
+}
+
+.reviewers__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--dark-grey);
+}
+
+.reviewers__info-star {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    background-color: var(--yellow);
+    border: 10px solid var(--yellow);
+    border-radius: 50%;
+}
+
+.reviewers__info-title {
+    font-size: 2.25rem;
+    color: var(--black);
+}
+
+.reviewers__info-description {
+    color: var(--dark-grey);
+}
+
+.reviewers__info-list {
+    list-style: none;
+    padding: 0px;
+    margin-top: 20px;
+    font-size: 0.875rem;
+    color: var(--dark-grey);
+}
+
+.reviewers__info-list-item {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+.reviewers__info-list-item::before {
+    padding-right: 10px;
+}
+
+.reviewers__testimony-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.reviewers__testimony-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px;
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 30px 40px 30px 40px;
+}
+
+.reviewers__testimony-card-image {
+    width: 100px;
+    height: auto;
+}
+
+.reviewers__testimony-card-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reviewers__testimony-card-stars {
+    display: flex;
+    gap: 1px;
+}
+
+.reviewers__testimony-card-name {
+    color: var(--black);
+    font-size: 0.875rem;
+}
+
+.reviewers__testimony-card-description {
+    color: var(--dark-grey);
+    font-size: 0.875rem;
+}
+
+.reviewers__testimony-container .reviewers__testimony-card:first-of-type {
+    /* Your styles here */
+    align-self: end;
+}
+
+@media only screen and (max-width:640px) {
+    .reviewers__container {
+        grid-template-columns: 1fr;
+        max-width: 640px;
+        margin-top: 40px;
+        padding: 20px;
+    }
+}
