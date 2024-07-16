@@ -1,0 +1,152 @@
+:root {
+    --indigo: #4036A9;
+    --black: #111729;
+    --grey: #CDD5E0;
+    --off-white: #F8FAFC;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-image: url("./bg-image.svg");
+    background-size: cover;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+::placeholder {
+    color: var(--grey);
+    opacity: 1;
+    /* Firefox */
+}
+
+::-ms-input-placeholder {
+    /* Edge 12 -18 */
+    color: var(--grey);
+}
+
+.cf__header {
+    padding: 20px;
+}
+
+.cf__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--white);
+}
+
+.cf__header-text {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.cf__subheader-text {
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.cf__header-text-container {
+    width: 800px;
+}
+
+.cf__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 1rem;
+    width: 800px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.cf__form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.cf__form-input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cf__form-label {
+    font-size: 0.875rem;
+}
+
+.cf__form-input,
+.cf__form-text-area {
+    padding: 20px;
+    border-radius: 16px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.cf__form-input {
+    height: 60px;
+    border: none;
+}
+
+.cf__form-select {
+    font-size: 1rem;
+    background-image: url("./Expand_down.svg");
+    background-position: 95%;
+    background-repeat: no-repeat;
+}
+
+.cf__form-submit-btn {
+    height: 70px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--indigo);
+    background-color: var(--white);
+}
+
+@media only screen and (max-width:1024px) {
+    .main-container {
+        align-items: start !important;
+    }
+
+    .cf__container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .cf__header-text-container {
+        width: 500px;
+    }
+
+    .cf__header-text {
+        font-size: 2.5rem;
+    }
+
+    .cf__subheader-text {
+        font-size: 1.5rem;
+    }
+
+    .cf__form {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    .cf__form {
+        padding-bottom: 100px;
+    }
+
+    .cf__form-row {
+        flex-direction: column;
+    }
+
+}
