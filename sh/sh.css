@@ -1,0 +1,13 @@
+:root {
+    --blue: #2A4DD0;
+    --green: #4CA152;
+    --black: #111729;
+    --navy: #223344;
+    --grey: #909193;
+    --light-blue: #F2F9FE;
+    --white: #ffffff;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}

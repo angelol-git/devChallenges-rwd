@@ -38,6 +38,7 @@ select {
     justify-content: center;
     flex-direction: column;
     color: var(--white);
+    padding-bottom: 20px;
 }
 
 .cf__header-text {
