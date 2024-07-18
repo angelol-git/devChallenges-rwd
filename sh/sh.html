@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -19,10 +19,73 @@
     <header class="header-container">
         <a href="../index.html" class="header-link">Home</a>
     </header>
+    <header class="sh__header-container">
+        <div class="sh__header-side">
+            <img src="./alarado-icon-homepage.svg" alt="Alarado Company Logo" class="sh__header-logo">
+        </div>
+        <nav>
+            <ul class="sh__header-list">
+                <li class="sh__header-list-item"><a class="sh__header-link" href="#">About us</a></li>
+                <li class="sh__header-list-item"><a class="sh__header-link" href="#">Product</a></li>
+                <li class="sh__header-list-item"><a class="sh__header-link" href="#">Resource</a></li>
+                <li class="sh__header-list-item"><a class="sh__header-link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sh__header-side">
+            <button type="button" data-theme-toggle aria-label="Change to dark theme"
+                class="sh__header-theme-button">Test</button>
+            <button class="sh__header-hamburger-menu" onclick="handleMobileMenuClickOpen()"><svg viewBox="0 0 100 80"
+                    width="25" height="25">
+                    <rect width="100" height="15" rx="10"></rect>
+                    <rect y="30" width="100" height="15" rx="10"></rect>
+                    <rect y="60" width="100" height="15" rx="10"></rect>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <nav class="sh__header-mobile-menu" id="mobile-menu">
+        <div class="sh__header-mobile-menu-x-container">
+            <button class="sh__header-mobile-menu-x" onclick="handleMobileMenuClickClose()">
+                <svg clip-rule=" evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                    viewBox="0 0 24 24" height="30" width="30" xmlns="http://www.w3.org/2000/svg"
+                    class="sh__header-mobile-menu-svg">
+                    <path
+                        d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
+                </svg>
+            </button>
+        </div>
+        <ul class="sh__header-mobile-list">
+            <li class="sh__header-mobile-list-item"><a class="sh__header-mobile-list-link" href="#">About us</a></li>
+            <li class="sh__header-mobile-list-item"><a class="sh__header-mobile-list-link" href="#">Product</a></li>
+            <li class="sh__header-mobile-list-item"><a class="sh__header-mobile-list-link" href="#">Resource</a></li>
+            <li class="sh__header-mobile-list-item"><a class="sh__header-mobile-list-link" href="#">Contact</a></li>
+        </ul>
+    </nav>
     <main class="main-container">
-        <section class="hero__container">
+        <section class="sh__hero-container">
+            <div class="sh__hero-info">
+                <p class="sh__hero-info-subheader">😎 SIMPLE WAY TO COMMUNICATE</p>
+                <h1 class="sh__hero-info-header">Actions for Accessibility in Design</h1>
+                <p class="sh__hero-info-text">The fastest way to build and deploy websites with resusable components.
+                </p>
+                <div class="sh__hero-info-button-row">
+                    <button class="sh__hero-info-button">GET STARTED</button>
+                    <a href="#" class="sh__hero-info-link">Get live demo</a>
+                </div>
+                <ul class="sh__hero-info-list">
+                    <li class="sh__hero-info-list-item"><img src="./Done_ring_round_fill.svg" alt="check mark">No credit
+                        card required</li>
+                    <li class="sh__hero-info-list-item"><img src="./Done_ring_round_fill.svg" alt="check mark">No
+                        software
+                        to install</li>
+                </ul>
+            </div>
+            <div class="sh__hero-image-container">
+                <img src="./hero-image-simple-homepage.png" alt="decoration" class="sh__hero-image">
+            </div>
         </section>
     </main>
+    <script src="./scripts.js"></script>
 </body>
 
 </html>

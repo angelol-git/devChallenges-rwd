@@ -8,6 +8,245 @@
     --white: #ffffff;
 }
 
+[data-theme="light"] {
+    --color-bg: var(--light-blue);
+    --color-bg-2: var(--white);
+    --color-text: var(--black);
+    --color-text-2: var(--blue);
+    --img-logo: url("./alarado-icon-homepage.svg");
+}
+
+[data-theme="dark"] {
+    --color-bg: var(--navy);
+    --color-bg-2: var(--black);
+    --color-text: var(--white);
+    --color-text-2: var(--light-blue);
+    --img-logo: url("./alarado-icon-homepage-dark.svg");
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: "Poppins", sans-serif;
+    background-color: var(--color-bg) !important;
+}
+
+.sh__header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 40px 20px 40px;
+}
+
+.sh__header-list {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.sh__header-link {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.sh__header-side {
+    min-width: 200px;
+}
+
+.sh__header-side:nth-of-type(2) {
+    display: flex;
+    justify-content: end;
+}
+
+.sh__header-logo {
+    content: var(--img-logo);
+    width: 150px;
+}
+
+.sh__header-hamburger-menu {
+    display: none;
+    background-color: var(--color-bg);
+    fill: var(--color-text);
+    border: none;
+    cursor: pointer;
+}
+
+.sh__header-mobile-menu {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: var(--color-bg-2);
+}
+
+.sh__header-mobile-menu-x-container {
+    display: flex;
+    justify-content: end;
+}
+
+.sh__header-mobile-menu-x {
+    padding: 10px;
+    background-color: var(--color-bg-2);
+    border: none;
+    cursor: pointer;
+}
+
+/* .sh__header-mobile-menu-x:hover {
+    background-color: var(--);
+} */
+
+.sh__header-mobile-menu-svg {
+    fill: var(--color-text);
+}
+
+.sh__header-mobile-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text);
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.sh__header-mobile-list-item {
+    color: var(--color-text);
+    list-style-type: none;
+}
+
+.sh__header-mobile-list-link {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+/* .sh__header-mobile-list-link:hover {
+    color: var(--grey);
+} */
+
+.sh__hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    padding: 20px 40px 20px 40px;
+}
+
+.sh__hero-info {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.sh__hero-info-subheader {
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.sh__hero-info-header {
+    font-size: 3.75rem;
+    font-weight: 900;
+    color: var(--color-text);
+}
+
+.sh__hero-info-text {
+    font-weight: 500;
+    font-size: 1.325rem;
+    color: var(--grey);
+}
+
+.sh__hero-info-button-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.sh__hero-info-button {
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--blue);
+    border-radius: 10px;
+    border: none;
+    padding: 15px 30px 15px 30px;
+}
+
+.sh__hero-info-link {
+    color: var();
+    font-weight: bold;
+
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+
+.sh__hero-info-list {
+    display: flex;
+    gap: 36px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: var(--navy);
+}
+
+.sh__hero-info-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sh__hero-info-button-row {}
+
+@media only screen and (max-width:1024px) {
+    .sh__hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sh__hero-image-container {
+        order: -1;
+    }
+
+    .sh__header-side {
+        min-width: 100px;
+    }
+
+    .sh__header-list {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:640px) {
+
+    .sh__header-list,
+    .sh__header-theme-button {
+        display: none;
+    }
+
+    .sh__header-hamburger-menu {
+        display: inline-block;
+    }
+
+    .sh__hero-info-header {
+        font-size: 2.25rem;
+    }
+
+    .sh__hero-info-header {
+        font-size: 2.25rem;
+    }
+
+    .sh__hero-info-text {
+        font-size: 1rem;
+    }
+
+    .sh__hero-info-button {
+        font-size: 0.825rem;
+        padding: 10px 20px 10px 20px;
+    }
+
 }
