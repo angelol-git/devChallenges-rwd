@@ -7,6 +7,20 @@
     <title>Dev Challenges - Responsive Web Developer</title>
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./reset.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var base = document.createElement('base');
+            var isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+
+            if (isProduction) {
+                base.href = "https://aladores.github.io/dc-rwd/"
+            } else {
+                base.href = "/";
+            }
+
+            document.head.appendChild(base);
+        });
+    </script>
 </head>
 
 <body>
