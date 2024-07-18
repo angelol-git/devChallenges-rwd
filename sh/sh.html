@@ -21,7 +21,7 @@
     </header>
     <header class="sh__header-container">
         <div class="sh__header-side">
-            <img src="./alarado-icon-homepage.svg" alt="Alarado Company Logo" class="sh__header-logo">
+            <img src="./images/alarado-icon-homepage.svg" alt="Alarado Company Logo" class="sh__header-logo">
         </div>
         <nav>
             <ul class="sh__header-list">
@@ -32,10 +32,31 @@
             </ul>
         </nav>
         <div class="sh__header-side">
-            <button type="button" data-theme-toggle aria-label="Change to dark theme"
-                class="sh__header-theme-button">Test</button>
-            <button class="sh__header-hamburger-menu" onclick="handleMobileMenuClickOpen()"><svg viewBox="0 0 100 80"
-                    width="25" height="25">
+            <button type="button" data-theme-toggle aria-label="Change to dark theme" class="sh__header-theme-button">
+                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="sh__header-theme-moon">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15 4C15.292 4 15.438 4 15.5781 4.04183C16.192 4.22522 16.4775 4.93111 16.1637 5.48976C16.0921 5.61719 15.8744 5.82779 15.4389 6.249C13.935 7.70352 13 9.74257 13 12C13 14.2574 13.935 16.2965 15.4389 17.751C15.8744 18.1722 16.0921 18.3828 16.1637 18.5102C16.4775 19.0689 16.192 19.7748 15.5781 19.9582C15.438 20 15.292 20 15 20V20C10.5817 20 7 16.4183 7 12C7 7.58172 10.5817 4 15 4V4Z"
+                        fill="#F2F9FE" />
+                </svg>
+                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="sh__header-theme-sun">
+                    <circle cx="12" cy="12" r="4" fill="#223344" />
+                    <path d="M12 5V3" stroke="#223344" stroke-width="2" stroke-linecap="round" />
+                    <path d="M12 21V19" stroke="#223344" stroke-width="2" stroke-linecap="round" />
+                    <path d="M16.9498 7.04996L18.364 5.63574" stroke="#223344" stroke-width="2"
+                        stroke-linecap="round" />
+                    <path d="M5.63608 18.3644L7.05029 16.9502" stroke="#223344" stroke-width="2"
+                        stroke-linecap="round" />
+                    <path d="M19 12L21 12" stroke="#223344" stroke-width="2" stroke-linecap="round" />
+                    <path d="M3 12L5 12" stroke="#223344" stroke-width="2" stroke-linecap="round" />
+                    <path d="M16.9498 16.95L18.364 18.3643" stroke="#223344" stroke-width="2" stroke-linecap="round" />
+                    <path d="M5.63608 5.63559L7.05029 7.0498" stroke="#223344" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+            <button class="sh__header-hamburger-menu" onclick="handleMobileMenuClickOpen()">
+                <svg viewBox="0 0 100 80" width="25" height="25">
                     <rect width="100" height="15" rx="10"></rect>
                     <rect y="30" width="100" height="15" rx="10"></rect>
                     <rect y="60" width="100" height="15" rx="10"></rect>
@@ -60,6 +81,32 @@
             <li class="sh__header-mobile-list-item"><a class="sh__header-mobile-list-link" href="#">Resource</a></li>
             <li class="sh__header-mobile-list-item"><a class="sh__header-mobile-list-link" href="#">Contact</a></li>
         </ul>
+        <div class="sh__header-mobile-button-container">
+            <button type="button" data-theme-mobile-toggle aria-label="Change to dark theme"
+                class="sh__header-mobile-theme-button">
+                <svg width="35" height="35" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    class="sh__header-mobile-theme-moon">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15 4C15.292 4 15.438 4 15.5781 4.04183C16.192 4.22522 16.4775 4.93111 16.1637 5.48976C16.0921 5.61719 15.8744 5.82779 15.4389 6.249C13.935 7.70352 13 9.74257 13 12C13 14.2574 13.935 16.2965 15.4389 17.751C15.8744 18.1722 16.0921 18.3828 16.1637 18.5102C16.4775 19.0689 16.192 19.7748 15.5781 19.9582C15.438 20 15.292 20 15 20V20C10.5817 20 7 16.4183 7 12C7 7.58172 10.5817 4 15 4V4Z"
+                        fill="#F2F9FE" />
+                </svg>
+                <svg width="35" height="35" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    class="sh__header-mobile-theme-sun">
+                    <circle cx="12" cy="12" r="4" fill="#223344" />
+                    <path d="M12 5V3" stroke="#223344" stroke-width="2" stroke-linecap="round" />
+                    <path d="M12 21V19" stroke="#223344" stroke-width="2" stroke-linecap="round" />
+                    <path d="M16.9498 7.04996L18.364 5.63574" stroke="#223344" stroke-width="2"
+                        stroke-linecap="round" />
+                    <path d="M5.63608 18.3644L7.05029 16.9502" stroke="#223344" stroke-width="2"
+                        stroke-linecap="round" />
+                    <path d="M19 12L21 12" stroke="#223344" stroke-width="2" stroke-linecap="round" />
+                    <path d="M3 12L5 12" stroke="#223344" stroke-width="2" stroke-linecap="round" />
+                    <path d="M16.9498 16.95L18.364 18.3643" stroke="#223344" stroke-width="2" stroke-linecap="round" />
+                    <path d="M5.63608 5.63559L7.05029 7.0498" stroke="#223344" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
     </nav>
     <main class="main-container">
         <section class="sh__hero-container">
@@ -73,19 +120,20 @@
                     <a href="#" class="sh__hero-info-link">Get live demo</a>
                 </div>
                 <ul class="sh__hero-info-list">
-                    <li class="sh__hero-info-list-item"><img src="./Done_ring_round_fill.svg" alt="check mark">No credit
+                    <li class="sh__hero-info-list-item"><img src="./images/Done_ring_round_fill.svg" alt="check mark">No
+                        credit
                         card required</li>
-                    <li class="sh__hero-info-list-item"><img src="./Done_ring_round_fill.svg" alt="check mark">No
+                    <li class="sh__hero-info-list-item"><img src="./images/Done_ring_round_fill.svg" alt="check mark">No
                         software
                         to install</li>
                 </ul>
             </div>
             <div class="sh__hero-image-container">
-                <img src="./hero-image-simple-homepage.png" alt="decoration" class="sh__hero-image">
+                <img src="./images/hero-image-simple-homepage.png" alt="decoration" class="sh__hero-image">
             </div>
         </section>
     </main>
-    <script src="./scripts.js"></script>
+    <script src="./sh.js"></script>
 </body>
 
 </html>
