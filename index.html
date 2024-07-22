@@ -13,7 +13,7 @@
             var isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
 
             if (isProduction) {
-                base.href = "https://aladores.github.io/dc-rwd/"
+                base.href = "https://aladores.github.io/devChallenges/"
             } else {
                 base.href = "/";
             }
@@ -26,24 +26,34 @@
 <body>
     <main class="main-container">
         <div class="home-container">
-            <h1 class="home__title">Dev Challenges - Responsive Web Developer</h1>
-            <ul>
-                <li>
-                    <a href="./mbc/mbc.html"> Minimal Blog Card</a>
-                </li>
-                <li>
-                    <a href="./bbc/bbc.html"> Business Blog Card</a>
-                </li>
-                <li>
-                    <a href="./reviewers/reviewers.html">Reviewers</a>
-                </li>
-                <li>
-                    <a href="./cf/cf.html">Contact Form</a>
-                </li>
-                <li>
-                    <a href="./sh/sh.html">Simple Homepage</a>
-                </li>
-            </ul>
+            <h1 class="home-header-1">devChallenges.io</h1>
+            <h2 class="home-header-2">Responsive Web Developer
+            </h2>
+            <div class="home-list-container">
+                <ul class="home-list">
+                    <li>
+                        <a href="./rwd/mbc/mbc.html"> Minimal Blog Card</a>
+                    </li>
+                    <li>
+                        <a href="./rwd/bbc/bbc.html"> Business Blog Card</a>
+                    </li>
+                    <li>
+                        <a href="./rwd/reviewers/reviewers.html">Reviewers</a>
+                    </li>
+                    <li>
+                        <a href="./rwd/cf/cf.html">Contact Form</a>
+                    </li>
+                    <li>
+                        <a href="./rwd/sh/sh.html">Simple Homepage</a>
+                    </li>
+                </ul>
+                <h2 class="home-header-2">JavaScript Developer</h2>
+                <ul class="home-list">
+                    <li>
+                        <a href="./jd/mbc.html">Multi-step Form</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </main>
 </body>

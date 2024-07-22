@@ -1,3 +1,13 @@
+:root {
+    --dark-purple: #883AE1;
+    --light-purple: #E6D6Fc;
+    --light-grey: #E5EAF0;
+    --dark-grey: #6C727F;
+    --off-white: #FAFAF9;
+    --white: #FFFFFF;
+    --black: #20293A;
+}
+
 .mbc__container {
     width: 350px;
     padding: 20px 16px 20px 16px;
