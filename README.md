@@ -11,3 +11,4 @@
 
 ## JavaScript Developer
 - Multi-step Register Form [Source](https://devchallenges.io/challenge/multi-step-register-form) - [Solution](https://aladores.github.io/devChallenges/js/mrf/mrf.html)
+- Music Player [Source](https://devchallenges.io/challenge/music-player) - [Solution](https://aladores.github.io/devChallenges/js/mp/mp.html)
