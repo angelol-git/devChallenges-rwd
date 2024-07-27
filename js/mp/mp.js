@@ -17,30 +17,23 @@ const buttonNext = document.getElementById("button-next");
 const buttonPrev = document.getElementById("button-prev");
 
 let songIndex = 0;
-let currentSong = document.createElement('audio');
+let currentSong = new Audio();
 let isPlaying = false;
 let isDragging = false;
 
+// Event listeners
 currentSong.addEventListener("timeupdate", updateProgressBar);
 currentSong.addEventListener("ended", nextSong);
 buttonPlayPause.addEventListener("click", () => isPlaying ? pauseSong() : playSong());
 buttonPrev.addEventListener("click", prevSong);
 buttonNext.addEventListener("click", nextSong);
 progressBarContainer.addEventListener("click", handleProgressBarClick);
-progressBarContainer.addEventListener('mousedown', (event) => {
-    if (event.target === progressBar) {
-        isDragging = true;
-        handleProgressBarDrag(event);
-    }
-});
-
-document.addEventListener('mousemove', (event) => {
-    if (isDragging) {
-        handleProgressBarDrag(event);
-    }
-});
-
+progressBarContainer.addEventListener('mousedown', startDragging);
+progressBarContainer.addEventListener('touchstart', startDragging);
+document.addEventListener('mousemove', handleMove);
+document.addEventListener('touchmove', handleMove);
 document.addEventListener('mouseup', () => isDragging = false);
+document.addEventListener('touchend', () => isDragging = false);
 // songSeeker.addEventListener("input", handleSeekerInput);
 // currentSong.addEventListener("timeupdate", updateSeeker);
 
@@ -89,37 +82,45 @@ function nextSong() {
     playSong();
 }
 
-function updateProgressBar(event) {
-    const { currentTime, duration } = event.srcElement;
-    const progressBarPercent = (currentTime / duration) * 100;
-
-    progressBar.style.width = `${progressBarPercent}%`;
-
-    let currentMinutes = Math.floor(currentSong.currentTime / 60);
-    let currentSeconds = Math.floor(currentSong.currentTime % 60);
-    if (currentSeconds < 10) {
-        currentSeconds = "0" + currentSeconds;
+function startDragging(event) {
+    if (event.target === progressBar) {
+        isDragging = true;
+        handleDrag(event);
     }
-    songTimeCurrent.innerText = `${currentMinutes}:${currentSeconds}`;
+}
+function handleMove(event) {
+    if (isDragging) {
+        handleDrag(event);
+    }
+}
+
+function updateProgressBar() {
+    const progressBarPercent = (currentSong.currentTime / currentSong.duration) * 100;
+    progressBar.style.width = `${progressBarPercent}%`;
+    songTimeCurrent.innerText = formatSongTime(currentSong.currentTime);
 }
 
 function handleProgressBarClick(event) {
     const width = this.clientWidth;
     const clickedX = event.offsetX;
     const duration = currentSong.duration;
-    // console.log(currentSong.duration);
-    // console.log((clickedX / width) * duration);
     currentSong.currentTime = (clickedX / width) * duration;
 }
 
-function handleProgressBarDrag(event) {
+function handleDrag(event) {
+    let clientX;
+    if (event.type === "touchmove" || event.type === "touchstart") {
+        clientX = event.touches[0].clientX;
+    }
+    else {
+        clientX = event.clientX;
+    }
+
     const rect = progressBarContainer.getBoundingClientRect();
-    let newX = event.clientX - rect.left;
+    let newX = clientX - rect.left;
     newX = Math.max(0, Math.min(newX, rect.width));
-    const duration = currentSong.duration;
-    const newTime = (newX / rect.width) * duration;
+    const newTime = (newX / rect.width) * currentSong.duration;
     currentSong.currentTime = newTime;
-    updateProgressBar(event);
 }
 
 function formatSongTime(seconds) {
