@@ -34,7 +34,7 @@ function playSong() {
 
 function pauseSong() {
     isPlaying = false;
-    buttonPlayPause.firstElementChild.src = "assets/Play_fill.svg";
+    buttonPlayPause.firstElementChild.src = "assets/Pause_fill.svg";
     currentSong.pause();
     cancelAnimationFrame(animationFrameId);
 }
