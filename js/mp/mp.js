@@ -22,7 +22,7 @@ let isPlaying = false;
 let isDragging = false;
 
 // Event listeners
-currentSong.addEventListener("timeupdate", updateProgressBar);
+currentSong.addEventListener("timeupdate", updateProgressBarAndTime);
 currentSong.addEventListener("ended", nextSong);
 buttonPlayPause.addEventListener("click", () => isPlaying ? pauseSong() : playSong());
 buttonPrev.addEventListener("click", prevSong);
@@ -39,13 +39,15 @@ document.addEventListener('touchend', () => isDragging = false);
 
 function playSong() {
     isPlaying = true;
-    buttonPlayPause.firstElementChild.src = "assets/Play_fill.svg";
+    buttonPlayPause.firstElementChild.src = "assets/Pause_fill.svg";
+    buttonPlayPause.firstElementChild.alt = "Pause Song";
     currentSong.play();
 }
 
 function pauseSong() {
     isPlaying = false;
-    buttonPlayPause.firstElementChild.src = "assets/Pause_fill.svg";
+    buttonPlayPause.firstElementChild.src = "assets/Play_fill.svg";
+    buttonPlayPause.firstElementChild.alt = "Play Song";
     currentSong.pause();
 }
 
@@ -94,7 +96,7 @@ function handleMove(event) {
     }
 }
 
-function updateProgressBar() {
+function updateProgressBarAndTime() {
     const progressBarPercent = (currentSong.currentTime / currentSong.duration) * 100;
     progressBar.style.width = `${progressBarPercent}%`;
     songTimeCurrent.innerText = formatSongTime(currentSong.currentTime);
