@@ -39,14 +39,14 @@ document.addEventListener('touchend', () => isDragging = false);
 
 function playSong() {
     isPlaying = true;
-    buttonPlayPause.firstElementChild.src = "assets/Pause_fill.svg";
+    buttonPlayPause.firstElementChild.src = "./assets/Pause_fill.svg";
     buttonPlayPause.firstElementChild.alt = "Pause Song";
     currentSong.play();
 }
 
 function pauseSong() {
     isPlaying = false;
-    buttonPlayPause.firstElementChild.src = "assets/Play_fill.svg";
+    buttonPlayPause.firstElementChild.src = "./assets/Play_fill.svg";
     buttonPlayPause.firstElementChild.alt = "Play Song";
     currentSong.pause();
 }
