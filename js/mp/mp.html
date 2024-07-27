@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,45 @@
 </head>
 
 <body>
+    <header class="header-container">
+        <a href="../../index.html" class="header-link">Home</a>
+    </header>
+    <main class="main-container justify-center">
+        <div class="mp__wrapper">
+            <div class="mp__container">
+                <img class="mp__album-art" id="album-art">
+                <div>
+                    <div class="mp__song-title" id="song-title">Song Title</div>
+                    <div class="mp__artist" id="artist">Artist</div>
+                </div>
 
+                <div class="mp__song-time-wrapper">
+                    <div class="mp__song-time-container">
+                        <div class="mp__song-time" id="song-time-current">
+                            0:00
+                        </div>
+                        <div class="mp__song-time" id="song-time-end">
+                            0:00
+                        </div>
+                    </div>
+                    <input type="range" class="mp__song-seeker" id="song-seeker">
+                </div>
+
+                <div class="mp__controls">
+                    <button class="mp__button-skip" id="button-prev">
+                        <img src="./assets/Stop_and_play_fill-1.svg" alt="Previous Song">
+                    </button>
+                    <button class="mp__button-play" id="button-play-pause">
+                        <img src="./assets/Play_fill.svg" alt="Play/Pause Song">
+                    </button>
+                    <button class="mp__button-skip" id="button-next">
+                        <img src="./assets/Stop_and_play_fill.svg" alt="Next Song">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./mp.js"></script>
 </body>
 
 </html>
