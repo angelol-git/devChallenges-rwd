@@ -22,14 +22,20 @@ body {
     padding: 20px;
 }
 
-.mp__wrapper {
+.mp__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
     position: relative;
     width: 500px;
     height: 100%;
     z-index: 1;
 }
 
-.mp__wrapper::before {
+.mp__container::before {
     content: "";
     position: absolute;
     top: 0;
@@ -40,15 +46,6 @@ body {
     border-radius: 24px;
     background-color: var(--bg);
     z-index: -1;
-}
-
-.mp__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    text-align: center;
 }
 
 .mp__album-art {
@@ -119,6 +116,7 @@ body {
     height: 5px;
     border-radius: 20px;
     background-color: var(--accent);
+    /* box-shadow: 0 0px 8px 1px var(--accent) */
 }
 
 /* Progress Bar Head */
