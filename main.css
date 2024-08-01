@@ -46,3 +46,7 @@ body {
 .home-list {
     padding: 0;
 }
+
+.font-small {
+    font-size: 0.825rem;
+}
