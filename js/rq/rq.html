@@ -15,9 +15,26 @@
 </head>
 
 <body>
+    <header class="header-container">
+        <a href="../../index.html" class="header-link">Home</a>
+    </header>
     <main class="main-container">
-        <div>
-
+        <div id="quote-container">
+            <h1 class="rq__author">George Bernard Shaw</h1>
+            <div class="rq__tags-container">
+                <div class="rq__tag" id="quote-category">
+                    Inspirational
+                </div>
+            </div>
+            <p class="rq__quote">"Learn from yesterday, live for today, hope for tomorrow."</p>
+        </div>
+        <div class="rq__button-container">
+            <button id="new-button" class="rq__button">
+                <img src="./assets/Regroup.svg" alt="generate a new quote.">
+            </button>
+            <button id="copy-button" class="rq__button">
+                <img src="./assets/link.svg" alt="copy quote">
+            </button>
         </div>
     </main>
     <script src="./rq.js"></script>
