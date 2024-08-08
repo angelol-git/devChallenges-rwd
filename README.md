@@ -1,8 +1,8 @@
-# devChallenges.io - Challenges
+# devChallenges.io - Responsive Web Developer Challenges
 
 [devChallenges.io](https://devchallenges.io/dashboard)
 
-## Responsive Web Developer
+## Projects
 - Minimal Blog Card - [Source](https://devchallenges.io/challenge/minimal-blog-card) - [Solution](https://aladores.github.io/devChallenges/rwd/mbc/mbc.html)
 - Business Blog Card - [Source](https://devchallenges.io/challenge/business-blog-card) - [Solution](https://aladores.github.io/devChallenges/rwd/bbc/bbc.html)
 - Testimonial Page - [Source](https://devchallenges.io/challenge/testimonial-page) - [Solution](https://aladores.github.io/dc-rwd/reviewers/reviewers.html)
